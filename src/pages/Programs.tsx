@@ -12,11 +12,7 @@ const Programs = () => {
       title: "Jumu'ah",
       description: "Weekly Friday sermon and congregational prayer at 2:00 PM. Join us for khutbah and community prayer.",
     },
-    {
-      icon: BookOpen,
-      title: "Halaqah / Study Circles",
-      description: "Qur'an and Seerah sessions for all levels. Learn about the life of the Prophet ﷺ and deepen your understanding of the Qur'an.",
-    },
+   
     {
       icon: Users,
       title: "Youth & Family Nights",
