@@ -19,7 +19,7 @@ const Donate = () => {
               Give to Masjid Talut
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Your support sustains daily prayers, programs, and community care.
+              Your support sustains daily prayers and community care.
             </p>
           </div>
 
