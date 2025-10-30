@@ -21,16 +21,15 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-    <Link to="/" className="group flex items-center">
-  <span className="inline-flex items-center rounded-full px-3 py-1
-                   bg-primary/10
-                   shadow-[0_0_20px_rgba(0,229,168,0.35)]
-                   group-hover:shadow-[0_0_26px_rgba(0,229,168,0.6)]
-                   transition-shadow">
-    <span className="font-heading font-bold text-2xl text-foreground tracking-tight">
+ <Link to="/" className="flex items-center space-x-2 group">
+  <div className="px-4 py-2 rounded-full bg-primary flex items-center justify-center 
+                  shadow-[0_0_20px_rgba(0,229,168,0.3)] 
+                  group-hover:shadow-[0_0_25px_rgba(0,229,168,0.5)] 
+                  transition-shadow">
+    <span className="text-primary-foreground text-lg font-bold tracking-wide">
       Masjid Talut
     </span>
-  </span>
+  </div>
 </Link>
 
 
