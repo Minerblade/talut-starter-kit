@@ -7,42 +7,30 @@ import { Calendar } from "lucide-react";
 const Announcements = () => {
   const announcements = [
     {
-      date: "December 15, 2024",
-      title: "Jumu'ah moved to 1:15 PM this Friday",
-      content: "Due to weather conditions, this week's Jumu'ah prayer will begin at 1:15 PM instead of the usual 2:00 PM. Please plan accordingly.",
+      date: "November 2, 2025",
+      title: "All prayer times will change.",
+      content: "Due to daylight savings, all prayer times will go back one hour. Please plan accordingly.",
       badge: "Important",
       badgeVariant: "destructive" as const,
     },
     {
-      date: "December 10, 2024",
+      date: "December 10, 2025",
       title: "Community Clean-up This Sunday",
       content: "Join us this Sunday at 10:00 AM for our monthly community clean-up. We'll be cleaning the masjid grounds and nearby areas. Refreshments will be provided.",
       badge: "Event",
       badgeVariant: "default" as const,
     },
     {
-      date: "December 5, 2024",
+      date: "February 17, 2026",
       title: "Ramadan Food Drive - Drop-off List",
       content: "Preparing for Ramadan! We're collecting non-perishable food items for local families. Needed items: rice, lentils, cooking oil, dates, and canned goods. Drop-off location: masjid office during prayer times.",
       badge: "Community",
       badgeVariant: "secondary" as const,
     },
+    
+   
     {
-      date: "November 28, 2024",
-      title: "New Youth Halaqah Starting in January",
-      content: "Announcing a new youth study circle starting January 2025! Sessions will be held every Sunday at 11:00 AM after Fajr. Topics include Islamic history, character development, and Qur'an study. Ages 12-18 welcome.",
-      badge: "Programs",
-      badgeVariant: "outline" as const,
-    },
-    {
-      date: "November 20, 2024",
-      title: "Winter Heating Fund Campaign",
-      content: "As temperatures drop, we're seeking support to cover increased heating costs. Any contribution helps keep our masjid warm and welcoming throughout winter. Donate via the Donate page or at the masjid.",
-      badge: "Fundraising",
-      badgeVariant: "default" as const,
-    },
-    {
-      date: "November 15, 2024",
+      date: "October 15, 2025",
       title: "Parking Reminder for Jumu'ah",
       content: "Reminder: Please be mindful of our neighbors during Jumu'ah. Use designated parking spots and avoid blocking driveways. Overflow parking is available on nearby side streets.",
       badge: "Notice",
