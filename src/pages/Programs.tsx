@@ -41,8 +41,8 @@ const Programs = () => {
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-foreground">
+          <div className="text-center mb-16">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
               Programs & Classes
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -51,31 +51,34 @@ const Programs = () => {
           </div>
 
           {/* Programs Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
             {programs.map((program, index) => {
               const Icon = program.icon;
               return (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <Icon className="w-12 h-12 text-primary mb-4" />
+                <Card key={index} className="p-6 glow-hover group">
+                  <Icon className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
                   <h2 className="font-heading font-semibold text-2xl mb-3">{program.title}</h2>
-                  <p className="text-muted-foreground">{program.description}</p>
+                  <p className="text-foreground/80">{program.description}</p>
                 </Card>
               );
             })}
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-3xl p-8 md:p-12 text-center">
-            <h2 className="font-heading font-bold text-3xl mb-4">Stay Updated</h2>
-            <p className="text-lg mb-6 opacity-95">
-              Check our announcements page for the latest program schedules, special events, and community updates.
-            </p>
-            <Link to="/announcements">
-              <Button size="lg" variant="secondary" className="font-semibold">
-                See Announcements
-              </Button>
-            </Link>
-          </div>
+          <Card className="p-8 md:p-12 text-center glass-card border-primary/30 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+            <div className="relative z-10">
+              <h2 className="font-heading font-bold text-3xl mb-4">Stay Updated</h2>
+              <p className="text-lg mb-6 text-foreground/80 max-w-2xl mx-auto">
+                Check our announcements page for the latest program schedules, special events, and community updates.
+              </p>
+              <Link to="/announcements">
+                <Button size="lg" className="font-semibold">
+                  See Announcements
+                </Button>
+              </Link>
+            </div>
+          </Card>
         </div>
       </main>
 

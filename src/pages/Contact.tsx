@@ -34,8 +34,8 @@ const Contact = () => {
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-foreground">
+          <div className="text-center mb-16">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
               Contact Us
             </h1>
             <p className="text-lg text-muted-foreground">
@@ -45,7 +45,7 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <Card className="p-8">
+            <Card className="p-8 glow-hover">
               <h2 className="font-heading font-semibold text-2xl mb-6">Send a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -102,13 +102,13 @@ const Contact = () => {
 
             {/* Contact Info & Volunteer */}
             <div className="space-y-6">
-              <Card className="p-6">
+              <Card className="p-6 glow-hover">
                 <div className="flex items-start space-x-4 mb-6">
                   <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-semibold text-lg mb-2">Call Us</h3>
-                    <p className="text-muted-foreground mb-1">(646) 899-8980</p>
-                    <p className="text-muted-foreground">(505) 999-0786</p>
+                    <p className="text-foreground/80 mb-1">(646) 899-8980</p>
+                    <p className="text-foreground/80">(505) 999-0786</p>
                   </div>
                 </div>
                 
@@ -116,32 +116,35 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-semibold text-lg mb-2">Email Us</h3>
-                    <p className="text-muted-foreground">info@masjidalut.org</p>
+                    <p className="text-foreground/80">info@masjidalut.org</p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/30">
-                <Users className="w-12 h-12 text-primary mb-4" />
-                <h3 className="font-heading font-semibold text-xl mb-3">Volunteer with Us</h3>
-                <p className="text-muted-foreground mb-4">
-                  From setup to security to food drives—there's a role for everyone. 
-                  Join us and make a difference in our community.
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Interested in volunteering? Mention it in your message above or call us directly.
-                </p>
+              <Card className="p-6 border-primary/50 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+                <div className="relative z-10">
+                  <Users className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="font-heading font-semibold text-xl mb-3">Volunteer with Us</h3>
+                  <p className="text-foreground/80 mb-4">
+                    From setup to security to food drives—there's a role for everyone. 
+                    Join us and make a difference in our community.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Interested in volunteering? Mention it in your message above or call us directly.
+                  </p>
+                </div>
               </Card>
 
-              <Card className="p-6">
+              <Card className="p-6 glow-hover">
                 <h3 className="font-heading font-semibold text-xl mb-3">Office Hours</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   The masjid is open for all five daily prayers. For administrative matters:
                 </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Best time to reach us: Between Dhuhr and Asr</li>
-                  <li>• Friday: Available before and after Jumu'ah</li>
-                  <li>• Weekend: Sunday mornings after Fajr</li>
+                <ul className="space-y-2 text-sm text-foreground/80">
+                  <li className="flex items-start"><span className="text-primary mr-2">•</span> Best time to reach us: Between Dhuhr and Asr</li>
+                  <li className="flex items-start"><span className="text-primary mr-2">•</span> Friday: Available before and after Jumu'ah</li>
+                  <li className="flex items-start"><span className="text-primary mr-2">•</span> Weekend: Sunday mornings after Fajr</li>
                 </ul>
               </Card>
             </div>

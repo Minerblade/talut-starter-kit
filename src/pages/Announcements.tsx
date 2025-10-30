@@ -57,8 +57,8 @@ const Announcements = () => {
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-foreground">
+          <div className="text-center mb-16">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
               Announcements
             </h1>
             <p className="text-lg text-muted-foreground">
@@ -69,16 +69,16 @@ const Announcements = () => {
           {/* Announcements List */}
           <div className="space-y-6">
             {announcements.map((announcement, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+              <Card key={index} className="p-6 glow-hover border-l-4 border-l-primary/50">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-2 md:mb-0">
-                    <Calendar size={16} />
+                    <Calendar size={16} className="text-primary" />
                     <span>{announcement.date}</span>
                   </div>
                   <Badge variant={announcement.badgeVariant}>{announcement.badge}</Badge>
                 </div>
                 <h2 className="font-heading font-semibold text-2xl mb-3">{announcement.title}</h2>
-                <p className="text-muted-foreground leading-relaxed">{announcement.content}</p>
+                <p className="text-foreground/80 leading-relaxed">{announcement.content}</p>
               </Card>
             ))}
           </div>

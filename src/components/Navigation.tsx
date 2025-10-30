@@ -17,12 +17,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-card border-b border-border/50 backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 bg-card/80 border-b border-border/30 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center shadow-[0_0_20px_rgba(0,229,168,0.3)] group-hover:shadow-[0_0_25px_rgba(0,229,168,0.5)] transition-shadow">
               <span className="text-primary-foreground text-xl">☪</span>
             </div>
             <span className="font-heading font-bold text-xl text-foreground">Masjid Talut</span>
@@ -33,7 +33,7 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path}>
                 <Button
-                  variant={location.pathname === link.path ? "secondary" : "ghost"}
+                  variant={location.pathname === link.path ? "outline" : "ghost"}
                   className="font-medium"
                 >
                   {link.label}
@@ -61,7 +61,7 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} onClick={() => setMobileMenuOpen(false)}>
                 <Button
-                  variant={location.pathname === link.path ? "secondary" : "ghost"}
+                  variant={location.pathname === link.path ? "outline" : "ghost"}
                   className="w-full justify-start"
                 >
                   {link.label}

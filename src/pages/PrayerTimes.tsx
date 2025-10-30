@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PrayerTimeCard from "@/components/PrayerTimeCard";
+import { Card } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Info } from "lucide-react";
 
@@ -20,8 +21,8 @@ const PrayerTimes = () => {
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-foreground">
+          <div className="text-center mb-16">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
               Daily Prayer & Jumu'ah Times
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -31,15 +32,15 @@ const PrayerTimes = () => {
           </div>
 
           {/* Jumu'ah Alert */}
-          <Alert className="mb-8 border-primary/50 bg-primary/5">
+          <Alert className="mb-8 border-primary/50 bg-primary/10 backdrop-blur-sm">
             <Info className="h-4 w-4 text-primary" />
-            <AlertDescription className="text-foreground">
+            <AlertDescription className="text-foreground/90">
               <strong>Jumu'ah:</strong> 2:00 PM every Friday. Please arrive a few minutes early for parking and wudu.
             </AlertDescription>
           </Alert>
 
           {/* Prayer Times Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
             {prayers.map((prayer) => (
               <PrayerTimeCard
                 key={prayer.prayer}
@@ -51,13 +52,16 @@ const PrayerTimes = () => {
           </div>
 
           {/* Visitor Note */}
-          <div className="bg-secondary/50 rounded-3xl p-8 text-center">
-            <h2 className="font-heading font-semibold text-2xl mb-4">Note for Visitors</h2>
-            <p className="text-muted-foreground">
-              Please arrive a few minutes early for parking and wudu. We look forward to welcoming you 
-              at Masjid Talut. If you have any questions about prayer times or facilities, please contact us.
-            </p>
-          </div>
+          <Card className="p-8 md:p-10 text-center glass-card relative overflow-hidden">
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="relative z-10">
+              <h2 className="font-heading font-semibold text-2xl mb-4">Note for Visitors</h2>
+              <p className="text-foreground/80 max-w-xl mx-auto">
+                Please arrive a few minutes early for parking and wudu. We look forward to welcoming you 
+                at Masjid Talut. If you have any questions about prayer times or facilities, please contact us.
+              </p>
+            </div>
+          </Card>
         </div>
       </main>
 
