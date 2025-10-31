@@ -8,24 +8,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_20px_rgba(0,229,168,0.3)]">
-              {/* Hero section */}
-<div className="text-center mt-8">
-  <h1 className="font-heading font-bold text-5xl md:text-6xl tracking-tight mb-3">
-    <span className="relative inline-block">
-      <span className="absolute inset-0 blur-lg bg-primary/40 rounded-lg"></span>
-      <span className="relative z-10 text-primary drop-shadow-[0_0_15px_rgba(0,229,168,0.85)]">
-        Masjid Talut
-      </span>
-    </span>
-  </h1>
-
-  <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
-    A house of Allah for Rifle and the Western Slope. Pray, learn, and serve.
-  </p>
-</div>
-
+            <div className="flex items-center space-x-2 mb-3">
+              {/* Small glowing pill logo text (no emoji) */}
+              <div className="px-3 py-1 rounded-full bg-primary shadow-[0_0_20px_rgba(0,229,168,0.3)]">
+                <span className="text-primary-foreground font-semibold">Masjid Talut</span>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              A house of Allah for Rifle and the Western Slope. Pray, learn, and serve.
+            </p>
+          </div>
 
           {/* Quick Links */}
           <div>
@@ -92,3 +84,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
